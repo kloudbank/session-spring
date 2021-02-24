@@ -1,5 +1,5 @@
 application:
-  name: session-spring-dev
+  name: ${APPLICATION_NAME}
 
 spring:
   redis:
