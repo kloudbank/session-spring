@@ -1,0 +1,13 @@
+application:
+  name: session-spring-local
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
+spring:
+  redis:
+    host: localhost
+    port: 7000
