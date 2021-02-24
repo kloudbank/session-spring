@@ -1,5 +1,5 @@
-application:
-  name: session-spring-local
+server:
+  port: 8080
 
 management:
   endpoints:
@@ -7,7 +7,27 @@ management:
       exposure:
         include: "*"
         
+---
 spring:
+  profiles: default
+  application:
+    name: session-spring-local
   redis:
-    host: localhost
+    host: localhosta
     port: 7000
+---
+spring:
+  profiles: dev
+  application:
+    name: session-spring-dev
+  redis:
+    host: session-redis.session-dev.svc.cluster.local
+    port: 6379
+---
+spring:
+  profiles: prd
+  application:
+    name: session-spring-prd
+  redis:
+    host: session-redis.session-prd.svc.cluster.local
+    port: 6379
