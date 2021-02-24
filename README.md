@@ -6,7 +6,7 @@ session architecture sample application using springboot
 mvn clean package
 docker build -t session-spring .
 docker tag session-spring htdp1/session-spring:v2
-docker tag session-spring htdp1/session-spring:lastest
+docker tag session-spring htdp1/session-spring:latest
 docker push htdp1/session-spring:v2
-docker push htdp1/session-spring:lastest
+docker push htdp1/session-spring:latest
 ```
