@@ -1,7 +1,0 @@
-application:
-  name: ${APPLICATION_NAME}
-
-spring:
-  redis:
-    host: ${REDIS_HOST}
-    port: ${REDIS_PORT}
