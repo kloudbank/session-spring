@@ -1,4 +1,4 @@
-package com.htdp1.sessionspring.demo.controller;
+package com.htdp1.sessionspring.session.controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.htdp1.sessionspring.rest.RestService;
+import com.htdp1.sessionspring.rest.service.RestService;
 
 @RestController
 public class SessionController {

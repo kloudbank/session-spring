@@ -1,4 +1,4 @@
-package com.htdp1.sessionspring.rest;
+package com.htdp1.sessionspring.rest.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;

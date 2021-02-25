@@ -1,4 +1,4 @@
-package com.htdp1.sessionspring.demo.controller;
+package com.htdp1.sessionspring.home.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
