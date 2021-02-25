@@ -1,0 +1,3 @@
+rest:
+  apis:
+    userinfo: http://k8s-sessiond-empsprin-eddc7b7a44-95816314.ap-northeast-2.elb.amazonaws.com

@@ -9,9 +9,8 @@ management:
 
 spring:
   config:
-    import: application-redis.yml
+    import: 
+    - application-redis.yml
+    - application-apis.yml
   application:
     name: session-spring-local
-  # redis:
-  #   host: 127.0.0.1
-  #   port: 7000
