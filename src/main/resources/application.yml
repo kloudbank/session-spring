@@ -10,7 +10,7 @@ management:
 spring:
   config:
     import: 
-    - application-redis.yml
     - application-apis.yml
+    - application-redis.yml
   application:
-    name: session-spring-local
+    name: session-spring

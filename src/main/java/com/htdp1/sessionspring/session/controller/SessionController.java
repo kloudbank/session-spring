@@ -7,29 +7,26 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.htdp1.sessionspring.rest.service.RestService;
+import com.htdp1.sessionspring.rest.service.UserinfoService;
 
 @RestController
 public class SessionController {
 	@Autowired
-	private RestService<Map<String, Object>> restService;
+	private UserinfoService userinfoService;
 
 	@Value("${spring.application.name}")
 	public String applicationName;
 
-	@Value("${rest.apis.userinfo}")
-	private String restApisUserinfo;
-
-	@GetMapping("/session")
+	@GetMapping("/session/{id}")
 	@ResponseBody
-	public Map<String, Object> index(HttpSession session) {
+	public Map<String, Object> session(@PathVariable String id, HttpSession session) {
 		if (session.getAttribute("SESSION_USERINFO") == null) {
-			Map<String, Object> userInfo = getUserInfo();
+			Map<String, Object> userInfo = userinfoService.getUserInfo(id);
 
 			session.setAttribute("SESSION_USERINFO", userInfo);
 		}
@@ -41,8 +38,4 @@ public class SessionController {
 		return sessionInfo;
 	}
 
-	private Map<String, Object> getUserInfo() {
-
-		return restService.get(restApisUserinfo + "/test/10001", HttpHeaders.EMPTY).getBody();
-	}
 }

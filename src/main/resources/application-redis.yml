@@ -1,4 +1,16 @@
-spring:
+spring: 
+  session:
+    store-type: redis
+    redis:
+      flush-mode: on-save
+      namespace: spring:session
   redis:
     host: 127.0.0.1
     port: 7000
+    password: 
+  cache: 
+    type: redis
+    redis:
+      host: 127.0.0.1
+      port: 7001
+      password: 
