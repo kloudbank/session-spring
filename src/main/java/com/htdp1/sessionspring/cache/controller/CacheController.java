@@ -37,6 +37,6 @@ public class CacheController {
 	@DeleteMapping("/userinfo/{id}")
 	public void deleteUserinfo(@PathVariable String id) {
 
-		log.info("deleteUserinfo");
+		log.info("delete cache Userinfo");
 	}
 }
