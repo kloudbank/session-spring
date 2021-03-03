@@ -13,8 +13,8 @@ import org.springframework.session.web.context.AbstractHttpSessionApplicationIni
 @Configuration
 @EnableRedisHttpSession
 public class SessionConfig extends AbstractHttpSessionApplicationInitializer {
-	private @Value("${spring.redis.host}") String host;
-	private @Value("${spring.redis.port}") int port;
+	private @Value("${spring.session.redis.host}") String host;
+	private @Value("${spring.session.redis.port}") int port;
 
 	@Bean
 	@Primary
